@@ -1,0 +1,40 @@
+<resources>
+
+    <dimen name="anim_base_x">46dp</dimen>
+    <dimen name="anim_base_y">44dp</dimen>
+    <dimen name="anim_base_w">92dp</dimen>
+    <dimen name="anim_base_h">86dp</dimen>
+    <dimen name="anim_dialog_x">34dp</dimen>
+    <dimen name="anim_dialog_y">32dp</dimen>
+    <dimen name="anim_dialog_w">62dp</dimen>
+    <dimen name="anim_dialog_h">60dp</dimen>
+    <dimen name="anim_button_x">60dp</dimen>
+    <dimen name="anim_button_y">70dp</dimen>
+    <dimen name="anim_button_w">135dp</dimen>
+    <dimen name="anim_button_h">142dp</dimen>
+    <dimen name="anim_system_lock_x">50dp</dimen>
+    <dimen name="anim_system_lock_y">50dp</dimen>
+    <dimen name="anim_system_lock_w">100dp</dimen>
+    <dimen name="anim_system_lock_h">98dp</dimen>
+    <dimen name="anim_params_w">680dp</dimen>
+    <dimen name="anim_params_h">878dp</dimen>
+    <dimen name="anim_params_x">300dp</dimen>
+    <dimen name="anim_params_y">360dp</dimen>
+    <dimen name="anim_net_w">112dp</dimen>
+    <dimen name="anim_net_h">84dp</dimen>
+    <dimen name="anim_net_x">60dp</dimen>
+    <dimen name="anim_net_y">42dp</dimen>
+    <dimen name="anim_region_w">70px</dimen>
+    <dimen name="anim_region_h">90px</dimen>
+    <dimen name="anim_region_x">35px</dimen>
+    <dimen name="anim_region_y">45px</dimen>
+    <dimen name="anim_display_w">90dp</dimen>
+    <dimen name="anim_display_h">84dp</dimen>
+    <dimen name="anim_display_x">45dp</dimen>
+    <dimen name="anim_display_y">42dp</dimen>
+    <dimen name="anim_net_info_w">90dp</dimen>
+    <dimen name="anim_net_info_h">84dp</dimen>
+    <dimen name="anim_net_info_x">45dp</dimen>
+    <dimen name="anim_net_info_y">42dp</dimen>
+
+</resources>
