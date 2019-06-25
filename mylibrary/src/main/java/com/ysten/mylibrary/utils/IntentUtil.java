@@ -16,7 +16,7 @@ public class IntentUtil {
 		context.startActivity(new Intent().setClass(context, target));
 	}
 
-	public void startActivity(Context context,String packageName,String ClassName)
+	public static void startActivity(Context context,String packageName,String ClassName)
 	{
 		Intent mIntent = new Intent();
 		mIntent.setComponent(new ComponentName(packageName, ClassName));
