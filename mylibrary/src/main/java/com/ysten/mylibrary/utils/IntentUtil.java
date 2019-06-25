@@ -3,6 +3,7 @@ package com.ysten.mylibrary.utils;
 import android.app.Activity;
 import android.app.Notification.Action;
 import android.app.Service;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 
@@ -13,6 +14,17 @@ public class IntentUtil {
 
 	public static void startActivity(Context context,Class<? extends Activity> target){
 		context.startActivity(new Intent().setClass(context, target));
+	}
+
+	public void startActivity(Context context,String packageName,String ClassName)
+	{
+		Intent mIntent = new Intent();
+		mIntent.setComponent(new ComponentName(packageName, ClassName));
+		try {
+			context.startActivity(mIntent);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void startActivity(Context context,Class<? extends Activity> target,boolean isFinish){
