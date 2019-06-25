@@ -6,6 +6,9 @@ import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
 
 
+/**
+ * 快速注册网络状态变更广播
+ */
 public class NetChangeMode {
 	private NetConnectChangReceiver myReceive;
 	
@@ -16,7 +19,6 @@ public class NetChangeMode {
 		filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 		filter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
 		filter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
-		filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 		myReceive = new NetConnectChangReceiver();
 		myReceive.setListener(callback);
 		context.registerReceiver(myReceive, filter);

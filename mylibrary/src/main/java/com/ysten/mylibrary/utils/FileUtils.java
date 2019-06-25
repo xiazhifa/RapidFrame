@@ -23,6 +23,9 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.util.Log;
 
+/**
+ * 文件相关操作
+ */
 public class FileUtils {
 	public static String TAG = "FileUtils";
 

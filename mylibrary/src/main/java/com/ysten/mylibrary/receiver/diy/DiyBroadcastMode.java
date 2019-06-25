@@ -6,6 +6,9 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 
 
+/**
+ *方便快速的自定义广播
+ */
 public class DiyBroadcastMode {
 	private DiyReceiver myReceive;
 	

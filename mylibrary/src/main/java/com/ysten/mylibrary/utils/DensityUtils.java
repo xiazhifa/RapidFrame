@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.WindowManager;
 
 /**
+ * 获取屏幕尺寸和转换
  * Created by Administrator on 2019/6/5/005.
  */
 

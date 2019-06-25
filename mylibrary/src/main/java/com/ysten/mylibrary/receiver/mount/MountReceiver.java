@@ -7,6 +7,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
+/**
+ * 广播
+ */
 /*U盘插拔状态变更的广播逻辑*/
 public class MountReceiver extends BroadcastReceiver 
 {	

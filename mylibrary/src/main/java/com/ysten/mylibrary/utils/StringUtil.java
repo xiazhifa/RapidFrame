@@ -1,6 +1,7 @@
 package com.ysten.mylibrary.utils;
 
 /**
+ * Stringg工具类
  * Created by Administrator on 2019/6/5/005.
  */
 

@@ -5,13 +5,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Parcelable;
 import android.util.Log;
 
+/**
+ * 广播
+ */
 public class NetConnectChangReceiver extends BroadcastReceiver {
 
-	private static final String TAG = "xujun";
+	private static final String TAG = "NetConnectChangReceiver";
 	private NetStatusCallback mCallback;
 
 	@Override
@@ -63,22 +67,25 @@ public class NetConnectChangReceiver extends BroadcastReceiver {
 			if (activeNetwork != null) {
 				if (activeNetwork.isConnected()) {
 					if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
-						if(mCallback!=null)mCallback.status(NetStatusCode.NetWifiConnect);
+						if(mCallback!=null)mCallback.netStatus(NetStatusCode.NetWifiConnect);
+						WifiManager wifi_service = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
+						WifiInfo wifiInfo = wifi_service.getConnectionInfo();
+						if(mCallback!=null)mCallback.wifiLevle(wifiInfo.getRssi());
 						Log.e(TAG, "当前WiFi连接可用 ");
 					}
 					else if (activeNetwork.getType() == ConnectivityManager.TYPE_ETHERNET) {
 						// connected to the mobile provider's data plan
-						if(mCallback!=null)mCallback.status(NetStatusCode.NetEthConnect);
+						if(mCallback!=null)mCallback.netStatus(NetStatusCode.NetEthConnect);
 						Log.e(TAG, "当前有线网络连接可用 ");
 					}
 					else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
 						// connected to the mobile provider's data plan
-						if(mCallback!=null)mCallback.status(NetStatusCode.NetEthConnect);
+						if(mCallback!=null)mCallback.netStatus(NetStatusCode.NetMobileConnect);
 						Log.e(TAG, "当前移动网络连接可用 ");
 					}
 				}
 				else {
-					if(mCallback!=null)mCallback.status(NetStatusCode.NetNoConnect);
+					if(mCallback!=null)mCallback.netStatus(NetStatusCode.NetNoConnect);
 					Log.e(TAG, "当前没有网络连接，请确保你已经打开网络 ");
 				}
 				Log.e(TAG, "info.getTypeName()" + activeNetwork.getTypeName());
@@ -90,7 +97,7 @@ public class NetConnectChangReceiver extends BroadcastReceiver {
 			}
 			else {
 				Log.e(TAG, "当前没有网络连接，请确保你已经打开网络 ");
-				if(mCallback!=null)mCallback.status(NetStatusCode.NetNoConnect);
+				if(mCallback!=null)mCallback.netStatus(NetStatusCode.NetNoConnect);
 			}
 		}
 	}

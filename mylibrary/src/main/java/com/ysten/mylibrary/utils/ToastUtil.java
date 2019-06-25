@@ -5,6 +5,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
+/**
+ * Toast工具类
+ */
 public class ToastUtil {
 	public static boolean canToast = true;
 

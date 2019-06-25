@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+/**
+ * View事件工具类
+ */
 public class ViewEventUtil {
 
 	//注册焦点和点击事件

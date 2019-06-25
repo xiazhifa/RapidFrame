@@ -7,7 +7,10 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
 
-public class DiyReceiver extends BroadcastReceiver 
+/**
+ * 广播
+ */
+public class DiyReceiver extends BroadcastReceiver
 {	
 	private static final String TAG = "DiyReceiver";
 	private DiyListener listener;

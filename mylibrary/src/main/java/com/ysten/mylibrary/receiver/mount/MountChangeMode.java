@@ -4,7 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-
+/**
+ * 快速注册挂载设备状态变化广播
+ */
 public class MountChangeMode {
 	private MountReceiver myReceive;
 	

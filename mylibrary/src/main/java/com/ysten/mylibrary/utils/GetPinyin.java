@@ -1,6 +1,8 @@
 package com.ysten.mylibrary.utils;
 
-//检测字符串是否是中文的工具类
+/**
+ * 检测字符串是否是中文
+ */
 public class GetPinyin {
 
 	public static boolean checkIsChines(String name) {

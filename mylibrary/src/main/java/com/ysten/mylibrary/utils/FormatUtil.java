@@ -2,6 +2,9 @@ package com.ysten.mylibrary.utils;
 
 import java.text.DecimalFormat;
 
+/**
+ * 格式转换工具类
+ */
 public class FormatUtil {
 
 	/**

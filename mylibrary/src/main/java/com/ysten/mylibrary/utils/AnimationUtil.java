@@ -7,6 +7,9 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 
 
+/**
+ * 动画UTIL，目前有放大效果
+ */
 public class AnimationUtil {
 
 	private static String TAG = "AnimationUtil";
