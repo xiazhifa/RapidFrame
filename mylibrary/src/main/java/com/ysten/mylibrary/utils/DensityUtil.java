@@ -8,8 +8,8 @@ import android.view.WindowManager;
  * Created by Administrator on 2019/6/5/005.
  */
 
-public class DensityUtils {
-    private DensityUtils() {
+public class DensityUtil {
+    private DensityUtil() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
