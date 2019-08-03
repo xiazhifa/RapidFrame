@@ -14,14 +14,23 @@ public class DiyReceiver extends BroadcastReceiver
 {	
 	private static final String TAG = "DiyReceiver";
 	private DiyListener listener;
-	
-	
+
+
+	/**
+	 * 接收广播
+	 * @param context
+	 * @param intent
+	 */
 	@Override
 	public void onReceive(Context context, Intent intent) 
 	{
 	    listener.onReceive(context, intent);
 	}
-	
+
+	/**
+	 * 设置回调接口
+	 * @param listener
+	 */
 	public void setListener(DiyListener listener)
 	{
 		this.listener = listener;

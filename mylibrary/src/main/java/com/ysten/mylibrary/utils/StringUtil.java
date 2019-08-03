@@ -6,9 +6,12 @@ package com.ysten.mylibrary.utils;
  */
 
 public class StringUtil {
-    /*
+
+    /**
      * 获取文件扩展名
-     * */
+     * @param filename
+     * @return
+     */
     public static String getExtensionName(String filename) {
         if ((filename != null) && (filename.length() > 0)) {
             int dot = filename.lastIndexOf('.');
@@ -19,9 +22,11 @@ public class StringUtil {
         return filename;
     }
 
-    /*
+    /**
      * Java文件操作 获取不带扩展名的文件名
-     * */
+     * @param filename
+     * @return
+     */
     public static String getFileNameNoEx(String filename) {
         if ((filename != null) && (filename.length() > 0)) {
             int dot = filename.lastIndexOf('.');

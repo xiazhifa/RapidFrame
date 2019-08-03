@@ -15,8 +15,12 @@ import java.util.Properties;
 import android.util.Log;
 
 public class PropertiesUtil{
-	
-    //加载、读取Properties文件
+
+    /**
+     * 加载、读取Properties文件
+     * @param propertiesPath
+     * @return
+     */
     public static Properties loadProperties(String propertiesPath){
         Properties pps = new Properties();
         try {
@@ -28,8 +32,15 @@ public class PropertiesUtil{
         }
         return pps;
     }
-    
-    //向Properties文件中加入数据
+
+    /**
+     * 向Properties文件中加入数据
+     * @param propertiesPath
+     * @param pps
+     * @param key
+     * @param value
+     * @return
+     */
     public static Properties addProperties(String propertiesPath,Properties pps,String key,String value){
         try {
             OutputStream fos = new FileOutputStream(propertiesPath);
@@ -41,8 +52,14 @@ public class PropertiesUtil{
         }
         return pps;
     }
-    
-    //从Properties文件中根据key删除
+
+    /**
+     * 从Properties文件中根据key删除
+     * @param propertiesPath
+     * @param pps
+     * @param key
+     * @return
+     */
     public static Properties removeProperties(String propertiesPath,Properties pps,String key){
         try {
             OutputStream oFile = new FileOutputStream(propertiesPath);
@@ -55,7 +72,13 @@ public class PropertiesUtil{
         return pps;
     }
 
-    //从Properties文件中根据key获取值value
+    /**
+     * 从Properties文件中根据key获取值value
+     * @param propertiesPath
+     * @param pps
+     * @param key
+     * @return
+     */
     public static String getProperties(String propertiesPath,Properties pps,String key){
         try {
             OutputStream oFile = new FileOutputStream(propertiesPath);
@@ -69,7 +92,14 @@ public class PropertiesUtil{
         return "";
     }
 
-    //Properties文件中根据key更新value
+    /**
+     * Properties文件中根据key更新value
+     * @param propertiesPath
+     * @param pps
+     * @param key
+     * @param value
+     * @return
+     */
     public static Properties updatePropertiesByKey(String propertiesPath,Properties pps,String key,String value){
         try {
             OutputStream oFile = new FileOutputStream(propertiesPath);
@@ -81,8 +111,14 @@ public class PropertiesUtil{
         }
         return pps;
     }
-    
-    //update Properties文件,以byte[]的形式，重新向properties中写入，特殊情况用
+
+    /**
+     * update Properties文件,以byte[]的形式，重新向properties中写入，特殊情况用
+     * @param propertiesPath
+     * @param pps
+     * @param str
+     * @return
+     */
     public static Properties updateProperties(String propertiesPath,Properties pps,byte [] str){
         try {
             File file = new File(propertiesPath);

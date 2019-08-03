@@ -1,4 +1,4 @@
-package com.ysten.mylibrary.utils;
+package com.ysten.mylibrary.instance;
 
 /**
  * 汉语转拼音
@@ -57,7 +57,12 @@ public class Cn2Spell {
     public static Cn2Spell getInstance() {
         return cn2Spell;
     }
-    // 汉字转成ASCII码
+
+    /**
+     * 汉字转成ASCII码
+     * @param chs
+     * @return
+     */
     private int getChsAscii(String chs) {
         int asc = 0;
         try {
@@ -78,7 +83,12 @@ public class Cn2Spell {
         }
         return asc;
     }
-    // 单字解析
+
+    /**
+     * 单字解析
+     * @param str
+     * @return
+     */
     public String convert(String str) {
         String result = null;
         int ascii = getChsAscii(str);
@@ -94,7 +104,12 @@ public class Cn2Spell {
         }
         return result;
     }
-    // 词组解析
+
+    /**
+     * 词组解析
+     * @param chs
+     * @return
+     */
     public String getSelling(String chs) {
         String key, value;
         buffer = new StringBuilder();

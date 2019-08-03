@@ -11,8 +11,12 @@ import android.net.wifi.WifiManager;
  */
 public class NetChangeMode {
 	private NetConnectChangReceiver myReceive;
-	
-	//注册广播
+
+	/**
+	 * 注册广播
+	 * @param context
+	 * @param callback
+	 */
 	public void register(Context context,NetStatusCallback callback)
 	{
 		IntentFilter filter = new IntentFilter();
@@ -23,8 +27,11 @@ public class NetChangeMode {
 		myReceive.setListener(callback);
 		context.registerReceiver(myReceive, filter);
 	}
-	
-	//注销广播
+
+	/**
+	 * 注销广播
+	 * @param context
+	 */
 	public void unRegister(Context context)
 	{
 		if(myReceive!=null)

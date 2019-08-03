@@ -11,8 +11,13 @@ import android.net.ConnectivityManager;
  */
 public class DiyBroadcastMode {
 	private DiyReceiver myReceive;
-	
-	//注册广播
+
+	/**
+	 * 注册广播
+	 * @param activity
+	 * @param actions
+	 * @param listener
+	 */
 	public void register(Activity activity, String[] actions, DiyListener listener)
 	{
 		IntentFilter filter = new IntentFilter();
@@ -25,8 +30,11 @@ public class DiyBroadcastMode {
 		activity.registerReceiver(myReceive, filter);
 				
 	}
-	
-	//注销广播
+
+	/**
+	 * 注销广播
+	 * @param activity
+	 */
 	public void unRegister(Activity activity)
 	{
 		if(myReceive!=null)
@@ -34,7 +42,5 @@ public class DiyBroadcastMode {
 			activity.unregisterReceiver(myReceive);
 		}	
 	}
-	
-	
 
 }

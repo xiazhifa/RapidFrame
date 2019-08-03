@@ -8,15 +8,20 @@ import android.net.NetworkInfo;
 import android.util.Log;
 
 /**
- * 广播
+ * U盘插拔状态变更的广播逻辑
  */
-/*U盘插拔状态变更的广播逻辑*/
+
 public class MountReceiver extends BroadcastReceiver 
 {	
 	private static final String TAG = "MountReceiver";
 	private MountListener listener;
-	
-	
+
+
+	/**
+	 * 接收广播
+	 * @param context
+	 * @param intent
+	 */
 	@Override
 	public void onReceive(Context context, Intent intent) 
 	{
@@ -34,7 +39,11 @@ public class MountReceiver extends BroadcastReceiver
 			Log.d(TAG,"-----U盘-----无匹配");
 		}
 	}
-	
+
+	/**
+	 * 设置回调接口
+	 * @param listener
+	 */
 	public void setListener(MountListener listener)
 	{
 		this.listener = listener;

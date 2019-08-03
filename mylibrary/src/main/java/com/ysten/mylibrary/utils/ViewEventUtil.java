@@ -13,14 +13,22 @@ import android.widget.AdapterView.OnItemSelectedListener;
  */
 public class ViewEventUtil {
 
-	//注册焦点和点击事件
+	/**
+	 * 注册焦点和点击事件
+	 * @param view
+	 * @param interfaces
+	 */
 	public static void setOnClickAndFocus(View view,Object interfaces)
 	{
 		view.setOnClickListener((OnClickListener) interfaces);
 		view.setOnFocusChangeListener((OnFocusChangeListener) interfaces);
 	}
-	
-	//注册ITEM点击和选择事件
+
+	/**
+	 * 注册ITEM点击和选择事件
+	 * @param view
+	 * @param interfaces
+	 */
 	public static void setOnItemSelectedAndClick(AdapterView<Adapter> view,Object interfaces)
 	{
 		view.setOnItemClickListener((OnItemClickListener) interfaces);

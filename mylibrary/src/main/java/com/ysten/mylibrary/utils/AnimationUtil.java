@@ -14,8 +14,16 @@ public class AnimationUtil {
 
 	private static String TAG = "AnimationUtil";
 	private static View previousView;
-	
 
+
+	/**
+	 * 变大的动画
+	 * @param view
+	 * @param filter
+	 * @param scale
+	 * @param duration
+	 * @param isFillAfter
+	 */
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@SuppressLint("NewApi")
 	public static void startBigAnim(View view, boolean filter,float scale,int duration,boolean isFillAfter)

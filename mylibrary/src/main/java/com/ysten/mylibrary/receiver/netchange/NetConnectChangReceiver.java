@@ -18,6 +18,11 @@ public class NetConnectChangReceiver extends BroadcastReceiver {
 	private static final String TAG = "NetConnectChangReceiver";
 	private NetStatusCallback mCallback;
 
+	/**
+	 * 接收广播
+	 * @param context
+	 * @param intent
+	 */
 	@Override
 	public void onReceive(Context context, Intent intent) {
 
@@ -102,6 +107,10 @@ public class NetConnectChangReceiver extends BroadcastReceiver {
 		}
 	}
 
+	/**
+	 * 设置回调接口
+	 * @param callback
+	 */
 	public void setListener(NetStatusCallback callback)
 	{
 		this.mCallback = callback;

@@ -9,8 +9,12 @@ import android.content.IntentFilter;
  */
 public class MountChangeMode {
 	private MountReceiver myReceive;
-	
-	//注册广播
+
+	/**
+	 * 注册广播
+	 * @param activity
+	 * @param listener
+	 */
 	public void register(Context activity,MountListener listener)
 	{
 		IntentFilter filter = new IntentFilter();
@@ -24,8 +28,11 @@ public class MountChangeMode {
 		activity.registerReceiver(myReceive, filter);
 				
 	}
-	
-	//注销广播
+
+	/**
+	 * 注销广播
+	 * @param activity
+	 */
 	public void unRegister(Context activity)
 	{
 		if(myReceive!=null)
