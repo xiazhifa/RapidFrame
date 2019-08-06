@@ -41,6 +41,24 @@ public class IntentUtil {
 	/**
 	 * 启动activity
 	 * @param context
+	 * @param packageName
+	 * @param ClassName
+	 */
+	public static void startActivity(Context context,String packageName,String ClassName,int flag)
+	{
+		Intent mIntent = new Intent();
+		mIntent.setComponent(new ComponentName(packageName, ClassName));
+		mIntent.setFlags(flag);
+		try {
+			context.startActivity(mIntent);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 启动activity
+	 * @param context
 	 * @param target
 	 * @param isFinish
 	 */
