@@ -20,7 +20,7 @@ public class MD5Util {
 		}
 		return cacheKey;
 	}
-	
+
 	/**
 	 * 辅助方法
 	 * @return

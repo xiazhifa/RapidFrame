@@ -17,7 +17,7 @@ public class ActivityUtil {
      * 获取当前栈顶Activity的名称
      * @return
      */
-    private String getTopApp(Context context)
+    public static String getTopApp(Context context)
     {
         String topActivity = "";
         ActivityManager activityManager = (ActivityManager)context.getSystemService(Context.ACTIVITY_SERVICE);
