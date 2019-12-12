@@ -30,7 +30,7 @@ public class MountReceiver extends BroadcastReceiver
 		{
 			listener.Mount();
 		}
-		else if(intent.getAction().equals(Intent.ACTION_MEDIA_UNMOUNTED))
+		else if(intent.getAction().equals(Intent.ACTION_MEDIA_EJECT))
 		{
 			listener.UnMount();
 		}
