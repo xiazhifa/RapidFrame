@@ -28,11 +28,11 @@ public class MountReceiver extends BroadcastReceiver
 	    Log.d(TAG,"-----U盘-----intent.action=" + intent.getAction().toString());
 		if(intent.getAction().equals(Intent.ACTION_MEDIA_MOUNTED))
 		{
-			listener.Mount();
+			listener.Mount(intent.getData().getPath());
 		}
 		else if(intent.getAction().equals(Intent.ACTION_MEDIA_EJECT))
 		{
-			listener.UnMount();
+			listener.UnMount(intent.getData().getPath());
 		}
 		else
 		{

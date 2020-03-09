@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RapidFrame.iml" filepath="$PROJECT_DIR$/RapidFrame.iml" />
+      <module fileurl="file://E:\code\githubCode\RapidFramed\RapidFrame.iml" filepath="E:\code\githubCode\RapidFramed\RapidFrame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RapidFramed.iml" filepath="$PROJECT_DIR$/RapidFramed.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\code\githubCode\RapidFramed\app\app.iml" filepath="E:\code\githubCode\RapidFramed\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
+      <module fileurl="file://E:\code\githubCode\RapidFramed\mylibrary\mylibrary.iml" filepath="E:\code\githubCode\RapidFramed\mylibrary\mylibrary.iml" />
     </modules>
   </component>
 </project>
